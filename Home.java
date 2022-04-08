@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Home{
+public class Home implements ActionListener {
     JFrame fr;
     JMenuBar menuBar;
     JMenu addmission,details,attendance,attendanceDetails,updateDetails,feeDetails,examination,about;
@@ -50,6 +50,8 @@ public class Home{
         faculty.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, ActionEvent.CTRL_MASK)); 
         //Set Dimension
         faculty.setPreferredSize(new Dimension(250, 50));
+        //Add EventListner
+        faculty.addActionListener(this);
         
 
         addmission.add(faculty);
@@ -348,6 +350,14 @@ public class Home{
         menuBar.add(cancel);
         fr.setJMenuBar(menuBar);
 
+
+    }
+
+    public void actionPerformed(ActionEvent ae){
+        String msg = ae.getActionCommand();
+        if(msg.equals("New Faculty")){
+            new NewFaculty();            
+        }
 
     }
     public static void main(String[] args){
