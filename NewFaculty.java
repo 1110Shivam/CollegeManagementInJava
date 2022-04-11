@@ -5,8 +5,8 @@ import java.awt.event.*;
 
 public class NewFaculty implements ActionListener{
     JFrame fr;
-    JLabel l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15;
-    JTextField t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14;
+    JLabel l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14;
+    JTextField t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11;
     JComboBox<String> c1,c2;
     JButton b1,b2;
 

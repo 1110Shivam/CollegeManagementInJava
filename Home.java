@@ -70,6 +70,7 @@ public class Home implements ActionListener {
         student.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_B,ActionEvent.CTRL_MASK));
         //Set Dimension
         student.setPreferredSize(new Dimension(250, 50));
+        student.addActionListener(this);
         
         
         addmission.add(student);
@@ -357,6 +358,9 @@ public class Home implements ActionListener {
         String msg = ae.getActionCommand();
         if(msg.equals("New Faculty")){
             new NewFaculty();            
+        }
+        else if(msg.equals("New Student")){
+            new NewStudent();            
         }
 
     }
