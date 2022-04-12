@@ -27,7 +27,7 @@ public class Home implements ActionListener {
         menuBar.setBackground(new Color(0,0,0));
 
         //Add logo in menu bar
-        JLabel b = new JLabel(new ImageIcon("Img\\Shivam.png"));
+        JLabel b = new JLabel(new ImageIcon("Img\\Shiv.png"));
 
         
         //Make admision menu in menu bar
@@ -295,7 +295,7 @@ public class Home implements ActionListener {
         examination.add(exmDetails);
 
         //Add enter exam marks in examination menu
-        enterExmMarks = new JMenuItem("Exam Marks");
+        enterExmMarks = new JMenuItem("Enter Marks");
         enterExmMarks.setFont(new Font("SansSerif",Font.BOLD,20));
         //Add Image
         ImageIcon icon14 = new ImageIcon(ClassLoader.getSystemResource("Img\\icon12.png"));
@@ -308,6 +308,7 @@ public class Home implements ActionListener {
         enterExmMarks.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N,ActionEvent.CTRL_MASK));
         //Set Dimension
         enterExmMarks.setPreferredSize(new Dimension(260,50));
+        enterExmMarks.addActionListener(this);
                 
         examination.add(enterExmMarks);
 
@@ -334,7 +335,7 @@ public class Home implements ActionListener {
         about.add(aboutUs);
 
         //Add cancel button
-        JLabel cancel = new JLabel(new ImageIcon("Img\\cancel.png"));
+        JLabel logo = new JLabel(new ImageIcon("Img\\Shivam.png"));
     
 
         menuBar.add(b);
@@ -348,7 +349,7 @@ public class Home implements ActionListener {
         menuBar.add(examination);
         menuBar.add(about);
         menuBar.add(Box.createHorizontalGlue());
-        menuBar.add(cancel);
+        menuBar.add(logo);
         fr.setJMenuBar(menuBar);
 
 
@@ -356,12 +357,14 @@ public class Home implements ActionListener {
 
     public void actionPerformed(ActionEvent ae){
         String msg = ae.getActionCommand();
-        if(msg.equals("New Faculty")){
+        if(msg.equals("New Faculty"))
             new NewFaculty();            
-        }
-        else if(msg.equals("New Student")){
+        
+        else if(msg.equals("New Student"))
             new NewStudent();            
-        }
+
+        else if(msg.equals("Enter Marks"))
+            new EnterMarks();
 
     }
     public static void main(String[] args){

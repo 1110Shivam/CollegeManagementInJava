@@ -21,10 +21,11 @@ public class NewFaculty implements ActionListener{
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         fr.setSize(screenSize.width,screenSize.height);
         fr.setVisible(true);
-        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
         JLabel l=new JLabel(new ImageIcon("Img\\W.jpg"));           
         l.setSize(screenSize.width,screenSize.height);                        
-        // fr.add(l);               
+        
+        
         l1 = new JLabel("New Faculty Details");
         l1.setBounds(800,50,500,50);
         l1.setFont(new Font("serif",Font.ITALIC,40));
