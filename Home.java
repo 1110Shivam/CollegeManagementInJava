@@ -333,6 +333,7 @@ public class Home implements ActionListener {
         aboutUs.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O,ActionEvent.CTRL_MASK));
         //Set Dimension
         aboutUs.setPreferredSize(new Dimension(210,50));
+        aboutUs.addActionListener(this);
 
         about.add(aboutUs);
 
@@ -373,6 +374,9 @@ public class Home implements ActionListener {
 
         else if(msg.equals("Enter Marks"))
             new EnterMarks();
+
+        else if(msg.equals("About Us"))
+            new AboutUs();
 
     }
     public static void main(String[] args){
