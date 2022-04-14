@@ -252,6 +252,7 @@ public class Home implements ActionListener {
         feeStructure.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_K,ActionEvent.CTRL_MASK));
         //Set Dimension
         feeStructure.setPreferredSize(new Dimension(250,50));
+        feeStructure.addActionListener(this);
 
         feeDetails.add(feeStructure);
 
@@ -363,6 +364,9 @@ public class Home implements ActionListener {
         
         else if(msg.equals("New Student"))
             new NewStudent();            
+
+        else if(msg.equals("Fee Structure"))
+            new FeeStructure();
 
         else if(msg.equals("Exam Details"))
             new ExamDetails();
