@@ -291,6 +291,7 @@ public class Home implements ActionListener {
         exmDetails.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M,ActionEvent.CTRL_MASK));
         //Set Dimension
         exmDetails.setPreferredSize(new Dimension(260,50));
+        exmDetails.addActionListener(this);
 
         examination.add(exmDetails);
 
@@ -362,6 +363,9 @@ public class Home implements ActionListener {
         
         else if(msg.equals("New Student"))
             new NewStudent();            
+
+        else if(msg.equals("Exam Details"))
+            new ExamDetails();
 
         else if(msg.equals("Enter Marks"))
             new EnterMarks();
