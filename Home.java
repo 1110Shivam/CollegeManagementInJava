@@ -270,6 +270,7 @@ public class Home implements ActionListener {
         feeForm.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L,ActionEvent.CTRL_MASK));
         //Set Dimension
         feeForm.setPreferredSize(new Dimension(250,50));
+        feeForm.addActionListener(this);
 
         feeDetails.add(feeForm);
 
@@ -368,6 +369,9 @@ public class Home implements ActionListener {
 
         else if(msg.equals("Fee Structure"))
             new FeeStructure();
+
+        else if(msg.equals("Fee Form"))
+            new FeeForm();
 
         else if(msg.equals("Exam Details"))
             new ExamDetails();
