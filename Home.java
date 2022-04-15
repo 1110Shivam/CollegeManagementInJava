@@ -134,6 +134,7 @@ public class Home implements ActionListener {
         fAttendance.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E,ActionEvent.CTRL_MASK));
         //Set Dimension
         fAttendance.setPreferredSize(new Dimension(210,50));
+        fAttendance.addActionListener(this);
         
         attendance.add(fAttendance);
         
@@ -368,6 +369,9 @@ public class Home implements ActionListener {
         
         else if(msg.equals("New Student"))
             new NewStudent();            
+
+        else if(msg.equals("Faculty"))
+            new FacultyAttendence();            
 
         else if(msg.equals("Student"))
             new StudentAttendence();            

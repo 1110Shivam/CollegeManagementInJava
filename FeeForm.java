@@ -8,7 +8,7 @@ public class FeeForm {
     JPanel contentPane;
     JTextField t1, t2, t3;
     JComboBox<String> cb1,cb2,cb3;
-    JButton b1, b2;
+    JButton b1;
     Choice c1;
 
     public FeeForm() {
@@ -116,17 +116,10 @@ public class FeeForm {
 
         b1 = new JButton("Pay");
         b1.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
-        b1.setBounds(150, 700, 150, 50);
+        b1.setBounds(350, 700, 150, 50);
         b1.setBackground(Color.BLACK);
         b1.setForeground(Color.WHITE);
         panel.add(b1);
-
-        b2 = new JButton("Back");
-        b2.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
-        b2.setBounds(500, 700, 150, 50);
-        b2.setBackground(Color.BLACK);
-        b2.setForeground(Color.WHITE);
-        panel.add(b2);
     }
 
     public static void main(String[] args) {
