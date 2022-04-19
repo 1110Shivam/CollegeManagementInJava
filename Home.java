@@ -112,6 +112,7 @@ public class Home implements ActionListener {
         sDetails.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D,ActionEvent.CTRL_MASK));
         //Set Dimension
         sDetails.setPreferredSize(new Dimension(270, 50));
+        sDetails.addActionListener(this);
  
         details.add(sDetails);
 
@@ -176,6 +177,7 @@ public class Home implements ActionListener {
         fAttendDetails.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_G,ActionEvent.CTRL_MASK));
         //Set Dimension
         fAttendDetails.setPreferredSize(new Dimension(320,50));
+        fAttendDetails.addActionListener(this);
         
         attendanceDetails.add(fAttendDetails);
 
@@ -376,11 +378,17 @@ public class Home implements ActionListener {
         else if(msg.equals("Faculty Details"))
             new FacultyDetails();            
 
+        else if(msg.equals("Student Details"))
+            new StudentDetails();            
+
         else if(msg.equals("Faculty"))
             new FacultyAttendence();            
 
         else if(msg.equals("Student"))
             new StudentAttendence();            
+
+        else if(msg.equals("Faculty Attendance"))
+            new FacultyAttendenceDetails();            
 
         else if(msg.equals("Update Faculty"))
             new UpdateFaculty();            
