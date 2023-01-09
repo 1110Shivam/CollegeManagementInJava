@@ -29,7 +29,7 @@ public class NewFaculty implements ActionListener{
         l1 = new JLabel("New Faculty Details");
         l1.setBounds(600,50,800,50);
         l1.setFont(new Font("serif",Font.ITALIC,30));
-        l1.setForeground(Color.black);
+        l1.setForeground(Color.BLACK);
         l.add(l1);
 
         l2 = new JLabel("Full Name");
