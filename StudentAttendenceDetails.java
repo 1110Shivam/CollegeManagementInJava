@@ -13,7 +13,7 @@ public class StudentAttendenceDetails {
         fr.setVisible(true);        
         
         b1=new JButton("Print");
-        b1.setSize(100,200);
+        // b1.setSize(100,200);
         b1.setFont(new Font("Sans serif",Font.BOLD,25));
         fr.add(b1,"South");
     
